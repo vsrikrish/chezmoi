@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "reveal_if_open": true,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
   "proxy": "",
   "use_smartcase_search": true,
   "languages": {
@@ -25,6 +30,11 @@
   },
   "prettier": {
     "allowed": true
+  },
+  "terminal": {
+    "shell": {
+      "program": "/opt/homebrew/bin/fish"
+    }
   },
   "markdown_preview": {
     "code_font_family": "Iosevka Term",
