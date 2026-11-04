@@ -1,28 +1,34 @@
-
-
-# Fonts
-font_family         Iosevka Term
-normal_font         Iosevka Term
-bold_font           Iosevka Term Bold
-italic_font         Iosevka Term Italic
-bold_italic_font    Iosevka Term Bold Italic
-
+# Font
+font_family      JetBrainsMono Nerd Font
 {{ if eq .machine "desktop" -}}
-font_size 15.0
+font_size        15.0
 {{- else -}}
-font_size 12.0
+font_size        12.0
 {{- end }}
 
-# Tabs and SCrollback
-tab_bar_edge                    bottom
-scrollback_lines                2000
-scrollback_indicator_opacity    0.5
+# Window size and padding (big screen gets a bigger window)
+remember_window_size  no
+{{ if eq .machine "desktop" -}}
+initial_window_width  160c
+initial_window_height 50c
+window_padding_width  8
+{{- else -}}
+initial_window_width  110c
+initial_window_height 35c
+window_padding_width  4
+{{- end }}
 
-editor  /usr/local/bin/zed
-
+# Shell (fish lives in different places on Mac and Linux)
+{{ if eq .chezmoi.os "darwin" -}}
 shell /opt/homebrew/bin/fish --login
+{{- else -}}
+shell /usr/bin/fish --login
+{{- end }}
 
-# BEGIN_KITTY_THEME
-# Glacier
-include current-theme.conf
-# END_KITTY_THEME
+# General
+scrollback_lines   10000
+enable_audio_bell  no
+cursor_shape       beam
+
+# macOS: make Option work as Alt (needed for fzf's Alt-C and other shortcuts)
+macos_option_as_alt yes
