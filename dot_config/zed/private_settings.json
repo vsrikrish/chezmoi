@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "soft_wrap_indent": "extra_two",
+  "soft_wrap": "editor_width",
   "reveal_if_open": true,
   "tabs": {
     "file_icons": true,

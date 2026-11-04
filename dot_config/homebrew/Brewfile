@@ -17,12 +17,18 @@ brew "ffmpeg"
 brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# TIFF library and utilities
+brew "libtiff"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # X.509 and CMS library
 brew "libksba"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Post-modern modal text editor
 brew "helix"
 # Generic library support script
@@ -31,8 +37,6 @@ brew "libtool"
 brew "imagemagick"
 # LLVM's OpenMP runtime library
 brew "libomp"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # YAML Parser
 brew "libyaml"
 # Open-source, cross-platform JavaScript runtime environment
@@ -45,12 +49,12 @@ brew "openjdk"
 brew "openjdk@17"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Presenter console with multi-monitor support for PDF files
+brew "pdfpc"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Simple, correct PEP 517 build frontend
 brew "python-build"
 # Rsync for cloud storage
@@ -77,14 +81,13 @@ brew "zlib"
 brew "zoxide"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
+cask "font-iosevka"
 # Markdown editor
 cask "markedit"
 # Minimal installer for conda
 cask "miniconda"
 # PDF reader and note-taking application
 cask "skim"
-# Google Chromium, sans integration with Google
-cask "ungoogled-chromium"
 vscode "akamud.vscode-theme-onedark"
 vscode "anthropic.claude-code"
 vscode "dracula-theme.theme-dracula"
