@@ -1,0 +1,46 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "Quarto: preview",
+    "command": "quarto",
+    "args": ["preview", "$ZED_FILE"],
+    "save": "current",
+    "allow_concurrent_runs": true
+  },
+  {
+    "label": "Quarto: render",
+    "command": "quarto",
+    "args": ["render", "$ZED_FILE"],
+    "save": "current"
+  },
+  {
+    "label": "Run Python file",
+    "command": "uv",
+    "args": ["run", "$ZED_FILE"],
+    "save": "current"
+  },
+  {
+    "label": "Run Julia file",
+    "command": "julia",
+    "args": ["$ZED_FILE"],
+    "save": "current"
+  },
+  {
+    "label": "Open PDF in Skim",
+    "command": "open",
+    "args": ["-a", "Skim", "$ZED_DIRNAME/$ZED_STEM.pdf"],
+    "reveal": "never"
+  },
+  {
+    "label": "lazygit",
+    "command": "lazygit",
+    "args": ["-p", "$ZED_WORKTREE_ROOT"]
+  },
+  {
+    "label": "yazi",
+    "command": "yazi",
+    "args": ["$ZED_DIRNAME"]
+  }
+]
