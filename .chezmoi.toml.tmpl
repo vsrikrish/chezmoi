@@ -1,0 +1,15 @@
+{{- $machine := promptStringOnce . "machine" "Machine type (laptop/desktop)" -}}
+[data]
+machine = {{ $machine | quote }}
+
+[git]
+autoCommit = true
+autoPush = true
+
+[edit]
+command = "zed"
+args = ["--wait"]
+apply = true
+
+[diff]
+pager = "delta"
