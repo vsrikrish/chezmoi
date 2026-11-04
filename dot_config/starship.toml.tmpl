@@ -10,9 +10,17 @@ $cmd_duration\
 $line_break\
 $character"""
 
+add_newline = false
+
 [directory]
-read_only = " "
+read_only = " "
 style = "yellow"
+{{ if eq .machine "desktop" -}}
+truncation_length = 6
+{{- else -}}
+truncation_length = 3
+{{- end }}
+truncate_to_repo = true
 
 [battery]
 full_symbol = "•"
@@ -41,3 +49,4 @@ style = "bright-red"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "blue"
+min_time = 2000
